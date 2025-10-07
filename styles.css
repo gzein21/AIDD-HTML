@@ -218,25 +218,6 @@ p {
     margin-bottom: 1rem;
 }
 
-.project-links {
-    margin-top: 1rem;
-}
-
-.project-links a {
-    display: inline-block;
-    background: #C8102E;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.project-links a:hover {
-    background: #8B0000;
-}
-
 /* Contact page specific */
 .contact-info {
     display: grid;
