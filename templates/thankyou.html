@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Thank You - George Zein{% endblock %}
+
+{% block content %}
+<div class="content">
+    <section class="hero">
+        <h1>Thank You!</h1>
+        <p>Your message has been successfully submitted. I'll get back to you as soon as possible.</p>
+    </section>
+
+    <section>
+        <h2>What Happens Next?</h2>
+        <div class="resume-item">
+            <h3>📧 Email Confirmation</h3>
+            <p>I'll review your message and respond within 24-48 hours. Please check your email for any follow-up questions or additional information I might need.</p>
+        </div>
+
+        <div class="resume-item">
+            <h3>🤝 Next Steps</h3>
+            <p>Depending on your inquiry, I may schedule a call to discuss your project in more detail or provide additional resources that might be helpful.</p>
+        </div>
+
+        <div class="resume-item">
+            <h3>📋 Project Discussion</h3>
+            <p>If you're interested in collaborating on a project, I'll prepare a detailed proposal outlining timelines, deliverables, and next steps.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Your Submission Details</h2>
+        <div class="resume-item">
+            <p><strong>Name:</strong> {{ form_data.first_name }} {{ form_data.last_name }}</p>
+            <p><strong>Email:</strong> {{ form_data.email }}</p>
+            <p><strong>Subject:</strong> {{ form_data.subject }}</p>
+            <p><strong>Message:</strong> {{ form_data.message }}</p>
+            <p><strong>Submitted:</strong> {{ form_data.submission_time }}</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Connect With Me</h2>
+        <p>While you wait for my response, feel free to connect with me on other platforms:</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>💼 LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/georgezeiniu" target="_blank" style="color: #C8102E; text-decoration: none;">linkedin.com/in/georgezeiniu</a></p>
+                <p>Connect with me professionally</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>🐙 GitHub</h3>
+                <p><a href="https://github.com/gzein21" target="_blank" style="color: #C8102E; text-decoration: none;">github.com/gzein21</a></p>
+                <p>Check out my code and projects</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>📧 Direct Email</h3>
+                <p><a href="mailto:gzein@iu.edu" style="color: #C8102E; text-decoration: none;">gzein@iu.edu</a></p>
+                <p>For urgent matters</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Explore More</h2>
+        <p>Take some time to explore my portfolio while you're here:</p>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="{{ url_for('about') }}" style="color: #C8102E; text-decoration: none; font-weight: 500; padding: 1rem 2rem; border: 2px solid #C8102E; border-radius: 5px; display: inline-block; margin: 0.5rem;">Learn About Me</a>
+            <a href="{{ url_for('projects') }}" style="color: #C8102E; text-decoration: none; font-weight: 500; padding: 1rem 2rem; border: 2px solid #C8102E; border-radius: 5px; display: inline-block; margin: 0.5rem;">View My Projects</a>
+            <a href="{{ url_for('resume') }}" style="color: #C8102E; text-decoration: none; font-weight: 500; padding: 1rem 2rem; border: 2px solid #C8102E; border-radius: 5px; display: inline-block; margin: 0.5rem;">See My Resume</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

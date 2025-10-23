@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - George Zein{% endblock %}
+
+{% block content %}
+<div class="content">
+    <section class="hero">
+        <h1>500 - Server Error</h1>
+        <p>Something went wrong on our end. Please try again later.</p>
+    </section>
+
+    <section>
+        <h2>What you can do:</h2>
+        <div class="resume-item">
+            <h3>🔄 Try Again</h3>
+            <p>Refresh the page or try again in a few moments.</p>
+        </div>
+
+        <div class="resume-item">
+            <h3>🏠 Go Home</h3>
+            <p>Return to the main page to explore my portfolio.</p>
+            <p><a href="{{ url_for('index') }}" style="color: #C8102E; text-decoration: none; font-weight: 500;">Go to Home Page</a></p>
+        </div>
+
+        <div class="resume-item">
+            <h3>📧 Contact Me</h3>
+            <p>If the problem persists, please let me know.</p>
+            <p><a href="{{ url_for('contact') }}" style="color: #C8102E; text-decoration: none; font-weight: 500;">Contact Me</a></p>
+        </div>
+    </section>
+</div>
+{% endblock %}

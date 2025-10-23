@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - George Zein{% endblock %}
+
+{% block content %}
+<div class="content">
+    <section>
+        <h2>My Projects</h2>
+        <p>
+            Manage your projects below. Add new projects via the form and delete as needed.
+        </p>
+        <p>
+            <a class="submit-btn" href="{{ url_for('add_project') }}">Add New Project</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>Projects List</h2>
+        {% if projects and projects|length > 0 %}
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in projects %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('static', filename='images/' ~ p['image_file_name']) }}" target="_blank">
+                            <img src="{{ url_for('static', filename='images/' ~ p['image_file_name']) }}" alt="{{ p['title'] }}" style="max-width: 160px; max-height: 120px; object-fit: cover;">
+                        </a>
+                    </td>
+                    <td>{{ p['title'] }}</td>
+                    <td>{{ p['description'] }}</td>
+                    <td>
+                        <form action="{{ url_for('delete_project_route', project_id=p['id']) }}" method="POST" onsubmit="return confirm('Delete this project?');">
+                            <button type="submit" class="submit-btn" style="background:#C8102E;">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No projects yet. <a href="{{ url_for('add_project') }}">Add your first project</a>.</p>
+        {% endif %}
+    </section>
+
+</div>
+{% endblock %}

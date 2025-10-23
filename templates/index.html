@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}George Zein - Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm an MSIS student at IU Kelley passionate about process automation and ERP systems, with corporate finance experience at Eaton Corporation and upcoming role in their Finance Leadership Development Program.</p>
+</section>
+
+<div class="content">
+    <section>
+        <h2>About Me</h2>
+        <p>I'm an MSIS student at Indiana University Kelley School of Business with a Bachelor's degree in Information Systems and Business Analytics. I have corporate finance experience from two internships at Eaton Corporation and will be joining their Finance Leadership Development Program as an Analyst.</p>
+        <p>My journey combines technical expertise with business acumen, focusing on how technology can optimize business operations and drive strategic value. I'm passionate about process automation, ERP systems, and the intersection of finance and technology.</p>
+        <p><a href="{{ url_for('about') }}" style="color: #667eea; text-decoration: none; font-weight: 500;">Learn more about my background and interests →</a></p>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <p>Here are some of the projects I've worked on that showcase my skills in business analytics, process automation, and financial analysis. Each project demonstrates my ability to combine technical expertise with business insights.</p>
+        <p><a href="{{ url_for('projects') }}" style="color: #667eea; text-decoration: none; font-weight: 500;">View all my projects →</a></p>
+    </section>
+
+    <section>
+        <h2>Get In Touch</h2>
+        <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to connect, I'd love to hear from you.</p>
+        <p><a href="{{ url_for('contact') }}" style="color: #667eea; text-decoration: none; font-weight: 500;">Contact me today →</a></p>
+    </section>
+</div>
+{% endblock %}

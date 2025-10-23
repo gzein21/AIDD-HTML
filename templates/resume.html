@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Resume - George Zein{% endblock %}
+
+{% block content %}
+<div class="content">
+    <section>
+        <h2>Resume</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">
+            <a href="{{ url_for('download_resume') }}" style="color: #667eea; text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border: 2px solid #667eea; border-radius: 5px;">Download PDF Version</a>
+        </p>
+    </section>
+
+    <section class="resume-section">
+        <h2>Professional Summary</h2>
+        <div class="resume-item">
+            <p>MSIS student at Indiana University Kelley School of Business with a Bachelor's degree in Information Systems and Business Analytics. Experienced in corporate finance through two internships at Eaton Corporation, with upcoming role as Analyst in their Finance Leadership Development Program. Passionate about process automation, ERP systems, and the intersection of finance and technology.</p>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2>Work Experience</h2>
+        
+        <div class="resume-item">
+            <h4>Finance Leadership Development Program - Analyst (Upcoming)</h4>
+            <div class="date">Starting 2026</div>
+            <p><strong>Eaton Corporation</strong> - Cleveland, OH</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Rotational program providing exposure to various finance functions</li>
+                <li>Focus on financial analysis, reporting, and strategic planning</li>
+                <li>Integration of technology solutions to optimize financial processes</li>
+                <li>Leadership development and cross-functional collaboration</li>
+            </ul>
+        </div>
+
+        <div class="resume-item">
+            <h4>Financial Planning and Analysis Intern - Aerospace</h4>
+            <div class="date">May 2025 – August 2025</div>
+            <p><strong>Eaton Corporation</strong> - Beltsville, MD</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Consolidated financial reports from a $1 billion product line by integrating data from multiple ERP systems into Oracle Planning, ensuring streamlined reporting across business units</li>
+                <li>Supported the Engine Solutions and Electrification business unit by delivering detailed financial analysis across 12 sites in 4 countries, driving strategic decision-making and operational excellence</li>
+                <li>Implemented a scalable financial analysis strategy for 20 global sites in 2 Business Units, reducing reporting preparation time and increasing planning productivity</li>
+            </ul>
+        </div>
+
+        <div class="resume-item">
+            <h4>Digital Finance and Innovation Intern</h4>
+            <div class="date">May 2024 - August 2024</div>
+            <p><strong>Eaton Corporation</strong> - Cleveland, OH</p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Integrated financial data from multiple ERPs into a centralized data governance platform, improving data quality and accessibility for multi-functional teams</li>
+                <li>Analyzed and transformed data using Power Apps, SQL, and Microsoft Copilot, streamlining financial workflows and contributing to Industry 4.0-driven automation</li>
+                <li>Collaborated with a global cross-functional team to deliver digital solutions across sectors using Jira and Agile methodology for project tracking and documentation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2>Education</h2>
+        
+        <div class="resume-item">
+            <h4>Master of Science in Information Systems (In Progress)</h4>
+            <div class="date">2025 - 2026</div>
+            <p><strong>Indiana University Kelley School of Business</strong> - Bloomington, IN</p>
+            <p><strong>Focus Areas:</strong> Process Automation, ERP Systems, Business Analytics, Digital Transformation</p>
+        </div>
+
+        <div class="resume-item">
+            <h4>Bachelor of Science in Information Systems and Business Analytics</h4>
+            <div class="date">2021 - 2025</div>
+            <p><strong>Indiana University Kelley School of Business</strong> - Bloomington, IN</p>
+            <p><strong>Relevant Coursework:</strong> Data Analytics, Business Intelligence, Database Management, Financial Analysis, Business Process Management, Enterprise Systems</p>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2>Technical Skills</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Analytics & BI Tools</h4>
+                <p>Tableau, Power BI, SQL, Excel Advanced Analytics, Python (Pandas, NumPy)</p>
+            </div>
+            
+            <div class="skill-category">
+                <h4>ERP Systems</h4>
+                <p>SAP, Oracle ERP, Microsoft Dynamics, Enterprise Resource Planning</p>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Database Management</h4>
+                <p>SQL Server, MySQL, Database Design, Data Modeling</p>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Financial Systems</h4>
+                <p>Financial Reporting, Budget Analysis, Variance Analysis, Financial Modeling</p>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Programming</h4>
+                <p>Python, R, SQL, VBA, JavaScript, HTML/CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2>Certifications</h2>
+        
+        <div class="resume-item">
+            <h4>Bloomberg ESG Certification</h4>
+            <div class="date">2023</div>
+            <p>Bloomberg ESG Certification</p>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2>Languages</h2>
+        
+        <div class="resume-item">
+            <ul style="padding-left: 1.5rem;">
+                <li><strong>English:</strong> Native</li>
+                <li><strong>Arabic:</strong> Conversational</li>
+                <li><strong>French:</strong> Basic</li>
+            </ul>
+        </div>
+    </section>
+</div>
+{% endblock %}
